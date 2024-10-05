@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman 2</title>
+    <style>
+        body {
+            background-color: #ffe6e6;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        .quiz {
+            margin-top: 30px;
+        }
+        .quiz input {
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .quiz button {
+            background-color: #ff6666;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Kamu Lagi Ngapain Sayang?</h1>
+    <div class="quiz">
+        <input type="text" id="activity" placeholder="Masukkan aktivitas">
+        <button onclick="nextPage()">Submit</button>
+    </div>
+    <script>
+        function nextPage() {
+            const activity = document.getElementById('activity').value;
+            if (activity) {
+                window.location.href = 'halaman3.html';
+            } else {
+                alert('Masukkan aktivitasmu!');
+            }
+        }
+    </script>
+</body>
+</html>
